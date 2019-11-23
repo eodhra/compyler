@@ -1,0 +1,368 @@
+State 0
+G   :=  / P 
+P   :=  / INT ID LPAR RPAR B 
+P   :=  / VOID ID LPAR RPAR B 
+
+State 1
+G   :=  P / 
+
+State 2
+P   :=  INT / ID LPAR RPAR B 
+
+State 3
+P   :=  VOID / ID LPAR RPAR B 
+
+State 4
+P   :=  INT ID / LPAR RPAR B 
+
+State 5
+P   :=  VOID ID / LPAR RPAR B 
+
+State 6
+P   :=  INT ID LPAR / RPAR B 
+
+State 7
+P   :=  VOID ID LPAR / RPAR B 
+
+State 8
+P   :=  INT ID LPAR RPAR / B 
+B   :=  / LBR S RBR 
+B   :=  / LBR D S RBR 
+
+State 9
+P   :=  VOID ID LPAR RPAR / B 
+B   :=  / LBR S RBR 
+B   :=  / LBR D S RBR 
+
+State 10
+P   :=  INT ID LPAR RPAR B / 
+
+State 11
+B   :=  LBR / S RBR 
+B   :=  LBR / D S RBR 
+S   :=  / L 
+S   :=  / L M S 
+D   :=  / INT ID SEMICOL 
+D   :=  / INT ID SEMICOL D 
+L   :=  / ID ASSIGN E SEMICOL 
+L   :=  / RETURN SEMICOL 
+L   :=  / RETURN E SEMICOL 
+L   :=  / WHILE M LPAR C RPAR M B 
+L   :=  / IF LPAR C RPAR M B 
+L   :=  / IF LPAR C RPAR M B N ELSE M B 
+
+State 12
+P   :=  VOID ID LPAR RPAR B / 
+
+State 13
+D   :=  INT / ID SEMICOL 
+D   :=  INT / ID SEMICOL D 
+
+State 14
+L   :=  ID / ASSIGN E SEMICOL 
+
+State 15
+B   :=  LBR S / RBR 
+
+State 16
+B   :=  LBR D / S RBR 
+S   :=  / L 
+S   :=  / L M S 
+L   :=  / ID ASSIGN E SEMICOL 
+L   :=  / RETURN SEMICOL 
+L   :=  / RETURN E SEMICOL 
+L   :=  / WHILE M LPAR C RPAR M B 
+L   :=  / IF LPAR C RPAR M B 
+L   :=  / IF LPAR C RPAR M B N ELSE M B 
+
+State 17
+S   :=  L / 
+S   :=  L / M S 
+M   :=  / 
+
+State 18
+L   :=  RETURN / SEMICOL 
+L   :=  RETURN / E SEMICOL 
+E   :=  / A 
+E   :=  / A RELOP E 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 19
+L   :=  WHILE / M LPAR C RPAR M B 
+M   :=  / 
+
+State 20
+L   :=  IF / LPAR C RPAR M B 
+L   :=  IF / LPAR C RPAR M B N ELSE M B 
+
+State 21
+D   :=  INT ID / SEMICOL 
+D   :=  INT ID / SEMICOL D 
+
+State 22
+L   :=  ID ASSIGN / E SEMICOL 
+E   :=  / A 
+E   :=  / A RELOP E 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 23
+B   :=  LBR S RBR / 
+
+State 24
+B   :=  LBR D S / RBR 
+
+State 25
+S   :=  L M / S 
+S   :=  / L 
+S   :=  / L M S 
+L   :=  / ID ASSIGN E SEMICOL 
+L   :=  / RETURN SEMICOL 
+L   :=  / RETURN E SEMICOL 
+L   :=  / WHILE M LPAR C RPAR M B 
+L   :=  / IF LPAR C RPAR M B 
+L   :=  / IF LPAR C RPAR M B N ELSE M B 
+
+State 26
+F   :=  ID / 
+
+State 27
+F   :=  LPAR / E RPAR 
+E   :=  / A 
+E   :=  / A RELOP E 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 28
+L   :=  RETURN SEMICOL / 
+
+State 29
+L   :=  RETURN E / SEMICOL 
+
+State 30
+E   :=  A / 
+E   :=  A / RELOP E 
+
+State 31
+A   :=  I / 
+A   :=  I / ADD A 
+A   :=  I / SUB A 
+
+State 32
+I   :=  F / 
+I   :=  F / MULT I 
+I   :=  F / DIV I 
+
+State 33
+F   :=  VALUE / 
+
+State 34
+L   :=  WHILE M / LPAR C RPAR M B 
+
+State 35
+L   :=  IF LPAR / C RPAR M B 
+L   :=  IF LPAR / C RPAR M B N ELSE M B 
+C   :=  / E 
+E   :=  / A 
+E   :=  / A RELOP E 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 36
+D   :=  INT ID SEMICOL / 
+D   :=  INT ID SEMICOL / D 
+D   :=  / INT ID SEMICOL 
+D   :=  / INT ID SEMICOL D 
+
+State 37
+L   :=  ID ASSIGN E / SEMICOL 
+
+State 38
+B   :=  LBR D S RBR / 
+
+State 39
+S   :=  L M S / 
+
+State 40
+F   :=  LPAR E / RPAR 
+
+State 41
+L   :=  RETURN E SEMICOL / 
+
+State 42
+E   :=  A RELOP / E 
+E   :=  / A 
+E   :=  / A RELOP E 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 43
+A   :=  I ADD / A 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 44
+A   :=  I SUB / A 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 45
+I   :=  F MULT / I 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 46
+I   :=  F DIV / I 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 47
+L   :=  WHILE M LPAR / C RPAR M B 
+C   :=  / E 
+E   :=  / A 
+E   :=  / A RELOP E 
+A   :=  / I 
+A   :=  / I ADD A 
+A   :=  / I SUB A 
+I   :=  / F 
+I   :=  / F MULT I 
+I   :=  / F DIV I 
+F   :=  / VALUE 
+F   :=  / ID 
+F   :=  / LPAR E RPAR 
+
+State 48
+C   :=  E / 
+
+State 49
+L   :=  IF LPAR C / RPAR M B 
+L   :=  IF LPAR C / RPAR M B N ELSE M B 
+
+State 50
+D   :=  INT ID SEMICOL D / 
+
+State 51
+L   :=  ID ASSIGN E SEMICOL / 
+
+State 52
+F   :=  LPAR E RPAR / 
+
+State 53
+E   :=  A RELOP E / 
+
+State 54
+A   :=  I ADD A / 
+
+State 55
+A   :=  I SUB A / 
+
+State 56
+I   :=  F MULT I / 
+
+State 57
+I   :=  F DIV I / 
+
+State 58
+L   :=  WHILE M LPAR C / RPAR M B 
+
+State 59
+L   :=  IF LPAR C RPAR / M B 
+L   :=  IF LPAR C RPAR / M B N ELSE M B 
+M   :=  / 
+
+State 60
+L   :=  WHILE M LPAR C RPAR / M B 
+M   :=  / 
+
+State 61
+L   :=  IF LPAR C RPAR M / B 
+L   :=  IF LPAR C RPAR M / B N ELSE M B 
+B   :=  / LBR S RBR 
+B   :=  / LBR D S RBR 
+
+State 62
+L   :=  WHILE M LPAR C RPAR M / B 
+B   :=  / LBR S RBR 
+B   :=  / LBR D S RBR 
+
+State 63
+L   :=  IF LPAR C RPAR M B / 
+L   :=  IF LPAR C RPAR M B / N ELSE M B 
+N   :=  / 
+
+State 64
+L   :=  WHILE M LPAR C RPAR M B / 
+
+State 65
+L   :=  IF LPAR C RPAR M B N / ELSE M B 
+
+State 66
+L   :=  IF LPAR C RPAR M B N ELSE / M B 
+M   :=  / 
+
+State 67
+L   :=  IF LPAR C RPAR M B N ELSE M / B 
+B   :=  / LBR S RBR 
+B   :=  / LBR D S RBR 
+
+State 68
+L   :=  IF LPAR C RPAR M B N ELSE M B / 
+

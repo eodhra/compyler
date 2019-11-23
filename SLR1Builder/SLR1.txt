@@ -1,0 +1,275 @@
+action	0	INT	2
+action	0	VOID	3
+action	1	EOF	acc
+action	2	ID	4
+action	3	ID	5
+action	4	LPAR	6
+action	5	LPAR	7
+action	6	RPAR	8
+action	7	RPAR	9
+action	8	LBR	11
+action	9	LBR	11
+action	10	EOF	P	:=	INT ID LPAR RPAR B 
+action	11	INT	13
+action	11	ID	14
+action	11	RETURN	18
+action	11	WHILE	19
+action	11	IF	20
+action	12	EOF	P	:=	VOID ID LPAR RPAR B 
+action	13	ID	21
+action	14	ASSIGN	22
+action	15	RBR	23
+action	16	ID	14
+action	16	RETURN	18
+action	16	WHILE	19
+action	16	IF	20
+action	17	RBR	S	:=	L 
+action	17	ID	M	:=	none 
+action	17	RETURN	M	:=	none 
+action	17	WHILE	M	:=	none 
+action	17	IF	M	:=	none 
+action	17	VALUE	M	:=	none 
+action	17	LPAR	M	:=	none 
+action	17	LBR	M	:=	none 
+action	18	ID	26
+action	18	LPAR	27
+action	18	SEMICOL	28
+action	18	VALUE	33
+action	19	ID	M	:=	none 
+action	19	RETURN	M	:=	none 
+action	19	WHILE	M	:=	none 
+action	19	IF	M	:=	none 
+action	19	VALUE	M	:=	none 
+action	19	LPAR	M	:=	none 
+action	19	LBR	M	:=	none 
+action	20	LPAR	35
+action	21	SEMICOL	36
+action	22	ID	26
+action	22	LPAR	27
+action	22	VALUE	33
+action	23	EOF	B	:=	LBR S RBR 
+action	23	ELSE	B	:=	LBR S RBR 
+action	23	RBR	B	:=	LBR S RBR 
+action	23	ID	B	:=	LBR S RBR 
+action	23	RETURN	B	:=	LBR S RBR 
+action	23	WHILE	B	:=	LBR S RBR 
+action	23	IF	B	:=	LBR S RBR 
+action	24	RBR	38
+action	25	ID	14
+action	25	RETURN	18
+action	25	WHILE	19
+action	25	IF	20
+action	26	SEMICOL	F	:=	ID 
+action	26	RPAR	F	:=	ID 
+action	26	RELOP	F	:=	ID 
+action	26	ADD	F	:=	ID 
+action	26	SUB	F	:=	ID 
+action	26	MULT	F	:=	ID 
+action	26	DIV	F	:=	ID 
+action	27	ID	26
+action	27	LPAR	27
+action	27	VALUE	33
+action	28	RBR	L	:=	RETURN SEMICOL 
+action	28	ID	L	:=	RETURN SEMICOL 
+action	28	RETURN	L	:=	RETURN SEMICOL 
+action	28	WHILE	L	:=	RETURN SEMICOL 
+action	28	IF	L	:=	RETURN SEMICOL 
+action	29	SEMICOL	41
+action	30	RELOP	42
+action	30	SEMICOL	E	:=	A 
+action	30	RPAR	E	:=	A 
+action	31	ADD	43
+action	31	SUB	44
+action	31	SEMICOL	A	:=	I 
+action	31	RPAR	A	:=	I 
+action	31	RELOP	A	:=	I 
+action	32	MULT	45
+action	32	DIV	46
+action	32	SEMICOL	I	:=	F 
+action	32	RPAR	I	:=	F 
+action	32	RELOP	I	:=	F 
+action	32	ADD	I	:=	F 
+action	32	SUB	I	:=	F 
+action	33	SEMICOL	F	:=	VALUE 
+action	33	RPAR	F	:=	VALUE 
+action	33	RELOP	F	:=	VALUE 
+action	33	ADD	F	:=	VALUE 
+action	33	SUB	F	:=	VALUE 
+action	33	MULT	F	:=	VALUE 
+action	33	DIV	F	:=	VALUE 
+action	34	LPAR	47
+action	35	ID	26
+action	35	LPAR	27
+action	35	VALUE	33
+action	36	INT	13
+action	36	ID	D	:=	INT ID SEMICOL 
+action	36	RETURN	D	:=	INT ID SEMICOL 
+action	36	WHILE	D	:=	INT ID SEMICOL 
+action	36	IF	D	:=	INT ID SEMICOL 
+action	37	SEMICOL	51
+action	38	EOF	B	:=	LBR D S RBR 
+action	38	ELSE	B	:=	LBR D S RBR 
+action	38	RBR	B	:=	LBR D S RBR 
+action	38	ID	B	:=	LBR D S RBR 
+action	38	RETURN	B	:=	LBR D S RBR 
+action	38	WHILE	B	:=	LBR D S RBR 
+action	38	IF	B	:=	LBR D S RBR 
+action	39	RBR	S	:=	L M S 
+action	40	RPAR	52
+action	41	RBR	L	:=	RETURN E SEMICOL 
+action	41	ID	L	:=	RETURN E SEMICOL 
+action	41	RETURN	L	:=	RETURN E SEMICOL 
+action	41	WHILE	L	:=	RETURN E SEMICOL 
+action	41	IF	L	:=	RETURN E SEMICOL 
+action	42	ID	26
+action	42	LPAR	27
+action	42	VALUE	33
+action	43	ID	26
+action	43	LPAR	27
+action	43	VALUE	33
+action	44	ID	26
+action	44	LPAR	27
+action	44	VALUE	33
+action	45	ID	26
+action	45	LPAR	27
+action	45	VALUE	33
+action	46	ID	26
+action	46	LPAR	27
+action	46	VALUE	33
+action	47	ID	26
+action	47	LPAR	27
+action	47	VALUE	33
+action	48	RPAR	C	:=	E 
+action	49	RPAR	59
+action	50	ID	D	:=	INT ID SEMICOL D 
+action	50	RETURN	D	:=	INT ID SEMICOL D 
+action	50	WHILE	D	:=	INT ID SEMICOL D 
+action	50	IF	D	:=	INT ID SEMICOL D 
+action	51	RBR	L	:=	ID ASSIGN E SEMICOL 
+action	51	ID	L	:=	ID ASSIGN E SEMICOL 
+action	51	RETURN	L	:=	ID ASSIGN E SEMICOL 
+action	51	WHILE	L	:=	ID ASSIGN E SEMICOL 
+action	51	IF	L	:=	ID ASSIGN E SEMICOL 
+action	52	SEMICOL	F	:=	LPAR E RPAR 
+action	52	RPAR	F	:=	LPAR E RPAR 
+action	52	RELOP	F	:=	LPAR E RPAR 
+action	52	ADD	F	:=	LPAR E RPAR 
+action	52	SUB	F	:=	LPAR E RPAR 
+action	52	MULT	F	:=	LPAR E RPAR 
+action	52	DIV	F	:=	LPAR E RPAR 
+action	53	SEMICOL	E	:=	A RELOP E 
+action	53	RPAR	E	:=	A RELOP E 
+action	54	SEMICOL	A	:=	I ADD A 
+action	54	RPAR	A	:=	I ADD A 
+action	54	RELOP	A	:=	I ADD A 
+action	55	SEMICOL	A	:=	I SUB A 
+action	55	RPAR	A	:=	I SUB A 
+action	55	RELOP	A	:=	I SUB A 
+action	56	SEMICOL	I	:=	F MULT I 
+action	56	RPAR	I	:=	F MULT I 
+action	56	RELOP	I	:=	F MULT I 
+action	56	ADD	I	:=	F MULT I 
+action	56	SUB	I	:=	F MULT I 
+action	57	SEMICOL	I	:=	F DIV I 
+action	57	RPAR	I	:=	F DIV I 
+action	57	RELOP	I	:=	F DIV I 
+action	57	ADD	I	:=	F DIV I 
+action	57	SUB	I	:=	F DIV I 
+action	58	RPAR	60
+action	59	ID	M	:=	none 
+action	59	RETURN	M	:=	none 
+action	59	WHILE	M	:=	none 
+action	59	IF	M	:=	none 
+action	59	VALUE	M	:=	none 
+action	59	LPAR	M	:=	none 
+action	59	LBR	M	:=	none 
+action	60	ID	M	:=	none 
+action	60	RETURN	M	:=	none 
+action	60	WHILE	M	:=	none 
+action	60	IF	M	:=	none 
+action	60	VALUE	M	:=	none 
+action	60	LPAR	M	:=	none 
+action	60	LBR	M	:=	none 
+action	61	LBR	11
+action	62	LBR	11
+action	63	RBR	L	:=	IF LPAR C RPAR M B 
+action	63	ID	L	:=	IF LPAR C RPAR M B 
+action	63	RETURN	L	:=	IF LPAR C RPAR M B 
+action	63	WHILE	L	:=	IF LPAR C RPAR M B 
+action	63	IF	L	:=	IF LPAR C RPAR M B 
+action	63	ELSE	N	:=	none 
+action	64	RBR	L	:=	WHILE M LPAR C RPAR M B 
+action	64	ID	L	:=	WHILE M LPAR C RPAR M B 
+action	64	RETURN	L	:=	WHILE M LPAR C RPAR M B 
+action	64	WHILE	L	:=	WHILE M LPAR C RPAR M B 
+action	64	IF	L	:=	WHILE M LPAR C RPAR M B 
+action	65	ELSE	66
+action	66	ID	M	:=	none 
+action	66	RETURN	M	:=	none 
+action	66	WHILE	M	:=	none 
+action	66	IF	M	:=	none 
+action	66	VALUE	M	:=	none 
+action	66	LPAR	M	:=	none 
+action	66	LBR	M	:=	none 
+action	67	LBR	11
+action	68	RBR	L	:=	IF LPAR C RPAR M B N ELSE M B 
+action	68	ID	L	:=	IF LPAR C RPAR M B N ELSE M B 
+action	68	RETURN	L	:=	IF LPAR C RPAR M B N ELSE M B 
+action	68	WHILE	L	:=	IF LPAR C RPAR M B N ELSE M B 
+action	68	IF	L	:=	IF LPAR C RPAR M B N ELSE M B 
+goto	0	P	1
+goto	8	B	10
+goto	9	B	12
+goto	11	S	15
+goto	11	D	16
+goto	11	L	17
+goto	16	S	24
+goto	16	L	17
+goto	17	M	25
+goto	18	E	29
+goto	18	A	30
+goto	18	I	31
+goto	18	F	32
+goto	19	M	34
+goto	22	E	37
+goto	22	A	30
+goto	22	I	31
+goto	22	F	32
+goto	25	S	39
+goto	25	L	17
+goto	27	E	40
+goto	27	A	30
+goto	27	I	31
+goto	27	F	32
+goto	35	E	48
+goto	35	C	49
+goto	35	A	30
+goto	35	I	31
+goto	35	F	32
+goto	36	D	50
+goto	42	E	53
+goto	42	A	30
+goto	42	I	31
+goto	42	F	32
+goto	43	A	54
+goto	43	I	31
+goto	43	F	32
+goto	44	A	55
+goto	44	I	31
+goto	44	F	32
+goto	45	I	56
+goto	45	F	32
+goto	46	I	57
+goto	46	F	32
+goto	47	E	48
+goto	47	C	58
+goto	47	A	30
+goto	47	I	31
+goto	47	F	32
+goto	59	M	61
+goto	60	M	62
+goto	61	B	63
+goto	62	B	64
+goto	63	N	65
+goto	66	M	67
+goto	67	B	68
